@@ -58,20 +58,9 @@ int main() {
 
 void playNote(char* note, int octave, int durationMicroSecs) {
     double freq = noteToFreq(note, octave);
-    int periodMicro = (int)((1/freq)*1000000);
-    int halfPeriod = periodMicro/2;
-
-    int timeElapsed = 0;
-    while (timeElapsed < durationMicroSecs)
-    {
-        gpio_put(18, 1);
-        sleep_us(halfPeriod);
-        gpio_put(18, 0);
-        sleep_us(halfPeriod);
-        timeElapsed += periodMicro;
-    }
+    
+    // Write your solution here...
 }
-
 
 void playExample1() {
     playNote("C#", 2, 125000);
@@ -113,4 +102,8 @@ void playExample1() {
 
     sleep_us(125000);
     playNote("G#", 5, 125000);
+}
+
+void playExample2() {
+    // Write your own tune here...
 }

@@ -72,7 +72,6 @@ void playNote(char* note, int octave, int durationMicroSecs) {
     }
 }
 
-
 void playExample1() {
     playNote("C#", 2, 125000);
 
