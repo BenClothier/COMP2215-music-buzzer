@@ -64,9 +64,9 @@ void playNote(char* note, int octave, int durationMicroSecs) {
     int timeElapsed = 0;
     while (timeElapsed < durationMicroSecs)
     {
-        gpio_put(18, 1);
+        gpio_put(buzzerPin, 1);
         sleep_us(halfPeriod);
-        gpio_put(18, 0);
+        gpio_put(buzzerPin, 0);
         sleep_us(halfPeriod);
         timeElapsed += periodMicro;
     }
